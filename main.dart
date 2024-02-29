@@ -1,11 +1,13 @@
 void main() {
   hello();
 
-  // Instanciando o objetio Employer da classe Person
+  // Instanciando o objeto Employer da classe Person
   //
   Person Employer = new Person();
 
   // Atribuições do objeto instanciando
+  // Estas informações são simuladas neste exemplo podendo serem provinientes de
+  // APIS, Banco de Dados ou I/O
   //
   Employer.name = "Celso Eugênio";
   Employer.activity = "Engenheiro";
@@ -18,7 +20,7 @@ void main() {
 }
 
 hello() {
-  print("Hello, World!");
+  print("Bem-Vindos ao Portal!");
 }
 
 class Person {
@@ -31,23 +33,23 @@ class Person {
     if (age < 65 && status == true) {
       print("Nome: $name  Idade: $age");
       print("$activity em atividade!");
-    } else {
-      if (age >= 65 && status == false) {
-        print("Nome: $name  Idade: $age");
-        print("$activity Aposentado!");
-      } else {
-        if (age >= 65 && status == true) {
-          print("Nome: $name  Idade: $age");
-          print("$activity Aposentado em Atividade!");
-        } else {
-          if (age < 65 && status == false) {
-            print("Nome: $name  Idade: $age");
-            print("$activity em Atividade Licenciada!");
-          }
-        }
-      }
+    } 
+    
+    if (age >= 65 && status == false) {
+      print("Nome: $name  Idade: $age");
+      print("$activity Aposentado!");
     }
-  }
+     
+    if (age >= 65 && status == true) {
+      print("Nome: $name  Idade: $age");
+      print("$activity Aposentado em Atividade!");
+    } 
+
+    if (age < 65 && status == false) {
+      print("Nome: $name  Idade: $age");
+      print("$activity em Atividade, Licenciado!");
+    }
+  }  
 }
 
 // Ativar comentário no bloco: CTRL+K CTRL+C
