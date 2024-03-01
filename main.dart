@@ -1,3 +1,5 @@
+final DateTime datelog = DateTime.now();
+
 void main() {
   hello();
 
@@ -20,7 +22,7 @@ void main() {
 }
 
 hello() {
-  print("Bem-Vindos ao Portal!");
+  print("Bem-Vindos ao Portal! Hoje $datelog");
 }
 
 class Person {
@@ -49,7 +51,8 @@ class Person {
       print("Nome: $name  Idade: $age");
       print("$activity em Atividade, Licenciado!");
     }
-  }  
+  }  // client()
+
 }
 
 // Ativar comentário no bloco: CTRL+K CTRL+C
